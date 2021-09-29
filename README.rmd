@@ -1,0 +1,18 @@
+---
+title: "README.RMD"
+author: "Huailin Tang"
+date: "9/28/2021"
+output: github_document
+---
+
+## Problem 1
+
+```{r}
+library(dplyr)
+library(nycflights13)
+library(ggplot2)
+
+sum(is.na(flights$dep_time))
+print(head((flights[is.na(flights$dep_time),])))
+```
+In flights which have NA in dep_time, dep_delay, arr_time, arr_delay, air_time are also missing. The story might be these flights are cancelled. 
